@@ -9,7 +9,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(HTTPStatus.OK)
         self.end_headers()
-        msg = 'Hello! I made this changed, you requested %s' % (self.path)
+        msg = 'Not seeing build trigger, you requested %s' % (self.path)
         self.wfile.write(msg.encode())
 
 
